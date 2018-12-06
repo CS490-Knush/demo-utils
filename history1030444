@@ -1,0 +1,105 @@
+    1  sudo apt-get install ansible git aptitude
+    2  sudo apt-get install ansible
+    3  sudo apt-get install ansible git aptitude
+    4  sudo apt-get update
+    5  sudo apt-get install ansible git aptitude
+    6  git clone https://github.com/containernet/containernet.git
+    7  cd containernet/ansible
+    8  sudo ansible-playbook -i "localhost," -c local install.yml
+    9  cd ..
+   10  sudo python setup.py install
+   11  sudo python examples/containernet_example.py
+   12  logout
+   13  sudo docker exec /bin/bash
+   14  sudo docker exec -it hello /bin/bash
+   15  sudo docker exec -it d1 /bin/bash
+   16  sudo docker containers
+   17  sudo docker ps
+   18  sudo docker exec -it 27f2b5ffb5e0 /bin/bash
+   19  sudo docker ps
+   20  sudo docker exec -it bc77f062375f /bin/bash
+   21  docker ps
+   22  sudo docker ps
+   23  sudo docker exec -ti mn.d1 bash
+   24  docker network inspect bridge
+   25  sudo docker network inspect bridge
+   26  curl -v 172.17.0.3:8080
+   27  ip a
+   28  ss -an | grep 8080
+   29  sudo dockerp s
+   30  sudo docker ps
+   31  sudo docker exec -it mn.d1 /bin/bash
+   32  sudo docker exec -it mn.d2 /bin/bash
+   33  sudo docker exec -it mn.d1 /bin/bash
+   34  sudo docker exec -it mn.d2 /bin/bash
+   35  curl -u admin:admin -H 'Content-type: application/json' localhost:8181/restconf/operational/network-topology:network-topology
+   36  docker exec -ti odl /opt/opendaylight/bin/client
+   37  sudo docker exec -ti odl /opt/opendaylight/bin/client
+   38* curl -v -u admin:admin http://$CONTROLLER:8181/restconf/operations/alto-spce:setup-route -d '{"input":{"endpoints":{"src":"'$1'","dst":"'$2'"},"flow-layer":"L3","objective-metrics":["hopcount"]}}' -H 'Content-type:application/json' | 
+   39  curl -v -u admin:admin http://localhost:8181/restconf/operations/alto-spce:setup-route -d '{"input":{"endpoints":{"src":"10.0.0.25","dst":"10.0.0.252"},"flow-layer":"L3","objective-metrics":["hopcount"]}}' -H 'Content-type:application/json'
+   40  sudo docker exec -ti odl /opt/opendaylight/bin/client
+   41  vim examples/containernet_example.py
+   42  vim containernet/examples/containernet_example.py
+   43  curl -u admin:admin -H 'Content-type: application/json' localhost:8181/restconf/operational/network-topology:network-topology > topo.json
+   44  vim topo.json 
+   45  ls
+   46  cd demo-utils/
+   47  ls
+   48  cd docker/unicorn-server/
+   49  ls
+   50  vim config/orchestrators.json 
+   51  vim config/server.json 
+   52  vim config/web.xml 
+   53  vim config/mock.json 
+   54  cd ../..
+   55  ls
+   56  cat add-h2h-intent 
+   57  ./add-h2h-intent 10.0.0.251 10.0.0.252 172.17.0.2 
+   58  vim add-h2h-intent 
+   59  ./add-h2h-intent 10.0.0.251 10.0.0.252 172.17.0.2 
+   60  sudo docker exec -ti unicorn /opt/opendaylight/bin/client
+   61  ./add-h2h-intent 10.0.0.251 10.0.0.252 172.17.0.2 
+   62  ./add-h2h-intent 10.0.0.252 10.0.0.251 172.17.0.2 
+   63  ./add-h2h-intent 10.0.0.251 10.0.0.253 172.17.0.2 
+   64  ./add-h2h-intent 10.0.0.253 10.0.0.251 172.17.0.2 
+   65  vim docker/unicorn-server/run.sh 
+   66  cd docker/unicorn-server/
+   67  ls
+   68  cat docker-compose.yml 
+   69  ll config/
+   70  cat run.sh 
+   71  cd ../..
+   72  ls
+   73  cat add-h2h-intent 
+   74  git diff add-h2h-intent
+   75  ll config/
+   76  ls
+   77  curl -v -u admin:admin http://172.17.0.2:8181/restconf/operations/alto-bwmonitor:bwmonitor-subscribe -H 'Content-type: application/json' -d '{"input":{"port-id":['\"openflow:1:2\"']}}'
+   78  curl -v -u admin:admin http://172.17.0.2:8181/restconf/operational/alto-bwmonitor:speeds -H 'Content-type: application/json'
+   79  docker ps
+   80  sudo docker ps
+   81  sudo docker stop unicorn
+   82  history | grep add-h2h
+   83  ./add-h2h-intent 10.0.0.251 10.0.0.252
+   84  docker exec -ti unicorn /opt/opendaylight/bin/client
+   85  sudo docker exec -ti unicorn /opt/opendaylight/bin/client
+   86  ./add-h2h-intent 10.0.0.251 10.0.0.252
+   87  ./add-h2h-intent 10.0.0.251 10.0.0.253
+   88  ./add-h2h-intent 10.0.0.252 10.0.0.251
+   89  ./add-h2h-intent 10.0.0.253 10.0.0.251
+   90  ls
+   91  vim utils
+   92  . utils 
+   93  get_all_ports 
+   94  sudo apt install -y jq
+   95  get_all_ports 
+   96  get_all_ports localhost 8181
+   97  subscribe_port localhost 8181
+   98  curl -v -u admin:admin http://172.17.0.2:8181/restconf/operational/alto-bwmonitor:speeds -H 'Content-type: application/json'
+   99  curl -u admin:admin http://172.17.0.2:8181/restconf/operational/alto-bwmonitor:speeds -H 'Content-type: application/json' | jq .
+  100  docker ps
+  101  sudo docker ps
+  102  sudo docker exec -ti mn.d1 bash
+  103  hist
+  104  history
+  105  history > history1030444
