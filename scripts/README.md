@@ -3,8 +3,8 @@ From `/home/anushreeagrawal/demo-utils/scripts`
 
 From `/home/anushreeagrawal/demo-utils/docker/unicorn-server` 
 - run `./run.sh`
-- then run `docker ps should show unicorn`, you should see the Unicorn docker container
-- then run `docker logs -f unicorn`
+- then run `sudo docker ps`, you should see the Unicorn docker container
+- then run `sudo docker logs -f unicorn`
 This may take a few minutes, once you see "Server:main: Started...", then you've started unicorn successfully.
 
 From `/home/anushreeagrawal`
@@ -25,7 +25,7 @@ From `/home/anushreeagrawal/demo-utils/scripts`
 
 From  `/home/anushreeagrawal/demo-utils/scripts`
 - run `sudo docker cp deploy-unicorn-routes.sh unicorn:/deploy-unicorn-routes.sh`
-- run `sudo docker exec -ti unicorn bash`, 
+- run `sudo docker exec -ti unicorn bash`
 
 Then from the new shell:
 - run `chmod +x deploy-unicorn-routes.sh`
