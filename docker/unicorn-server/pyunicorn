@@ -179,7 +179,7 @@ class DomainAgent(object):
 	
             if len(matched_paths) > 0:
                 min_path_len = min(matched_paths.keys())
-                print "min_path", min_path_len, matched_path.get(min_path_len)
+                print "min_path", min_path_len, matched_paths.get(min_path_len)
                 self.setup_path(cur_id, src, dst, matched_paths.get(min_path_len))
                 cur_id += 1
 
