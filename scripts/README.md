@@ -22,6 +22,7 @@ From `/home/anushreeagrawal/demo-utils`
 
 From `/home/anushreeagrawal/demo-utils/scripts`
 - run `./default-path.sh`
+Should see "HTTP/1.1 201 Created"
 
 From  `/home/anushreeagrawal/demo-utils/scripts`
 - run `sudo docker cp deploy-unicorn-routes.sh unicorn:/deploy-unicorn-routes.sh`
