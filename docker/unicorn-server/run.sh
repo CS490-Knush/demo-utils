@@ -10,4 +10,5 @@ sudo docker run \
     -v $(pwd)/config/server.json:/opt/unicorn-server/WEB-INF/classes/server.json \
     -v $(pwd)/config/mock.json:/opt/unicorn-server/WEB-INF/classes/adapter/adapter.json \
     -v $(pwd)/config/orchestrators.json:/opt/unicorn-server/WEB-INF/classes/orchestrator/orchestrator.json \
+    -v $(pwd)/pyunicorn:/bin/pyunicorn \
     fno2010/unicorn-server:odl-boron-sr4
