@@ -164,28 +164,24 @@ class DomainAgent(object):
 
             paths = self.get_all_e2e_path(src, dst)
 
-            print "ALL PATHS", src, dst
-
             matched_paths = {}
 
             for path in paths:
-		print len(path), path
-		continue
+		# print len(path), path
                 if self.debug:
                     print '[compute_on_demand_path] check_path:', path
                 if self.match_demand(path, min_bw, pass_to_dpi):
                     if self.debug:
                         print '[compute_on_demand_path] match the demand'
                     matched_paths[len(path)] = path
-                    print "path matches"
 
-            print matched_paths            
+            # print matched_paths            
 	
             if len(matched_paths) > 0:
-                min_path_len = min(matched_paths, key = matched_paths.get)
+                min_path_len = min(matched_paths.keys())
                 print "min_path", min_path_len, matched_path.get(min_path_len)
-                #self.setup_path(cur_id, src, dst, matched_paths.get(min_path_len))
-                #cur_id += 1
+                self.setup_path(cur_id, src, dst, matched_paths.get(min_path_len))
+                cur_id += 1
 
         return json.dumps({'error-code': 'OK'})
 
