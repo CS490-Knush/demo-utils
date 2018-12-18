@@ -36,3 +36,6 @@ From `/home/anushreeagrawal/demo-utils/scripts`
 From `/home/anushreeagrawal/demo-utils/scripts`
 - run `./set-bw-top{####}.sh`
 - run `./test-bw-capacity.sh` to check link bandwidths
+
+From `/home/anushreeagrawal/demo-utils/scripts`
+- run `./startup.sh` to start servers and setup storage files
